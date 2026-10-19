@@ -1,0 +1,41 @@
+- id: low-light-detection
+  number: '01'
+  member: hesam-ghasemi
+  researcher: Mohammad Hesam Ghasemi
+  field: Computer vision × Reinforcement learning
+  short_title: Seeing through the dark.
+  title: Low-Light Object Detection with Reinforcement Learning–Guided Enhancement
+  description: Exploring how reinforcement learning can guide image enhancement for object detection in low-light conditions. The focus is on connecting enhancement decisions with the needs of the detector.
+  question: How can an enhancement policy help a detector see more clearly in low light?
+  motion: lowlight
+  showcase_label: Low-light vision
+  tags: [Low-light vision, Object detection, Reinforcement learning]
+  stages: [Low-light observation, Enhancement policy, Detector feedback]
+
+- id: offline-to-online-rl
+  number: '02'
+  member: hesam-soleymani
+  researcher: Hesam Soleymani
+  field: Reinforcement learning
+  short_title: From experience to interaction.
+  title: Offline-to-Online Reinforcement Learning
+  description: Studying the transition from learning with a fixed dataset to learning through interaction. The focus is on how a policy initialized offline can continue to adapt in an online environment.
+  question: How can prior experience become a starting point for continued learning?
+  motion: reinforcement
+  showcase_label: Adaptive learning
+  tags: [Offline RL, Online adaptation, Policy learning]
+  stages: [Stored experience, Offline policy, Online interaction]
+
+- id: llm-malware-detection
+  number: '03'
+  member: mojtaba-asadi
+  researcher: Mojtaba Asadi
+  field: Large language models × Cybersecurity
+  short_title: Reading beyond the code.
+  title: Malware Detection with Large Language Models
+  description: Exploring large language models for malware detection. The focus is on representing code and behavioral information in ways that support the analysis of potentially malicious software.
+  question: How can language models help interpret the signals that distinguish malicious software?
+  motion: malware
+  showcase_label: LLM security
+  tags: [Large language models, Malware detection, Code understanding]
+  stages: [Code & behavior, Language representation, Detection analysis]

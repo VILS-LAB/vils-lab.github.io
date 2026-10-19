@@ -1,19 +1,15 @@
 # site properties and page defaults
 title: VILS-LAB
+supervisor: Dr. Arash Abdi
 subtitle: 
-description: An engaging 1-3 sentence description of your lab.
+description: Vision Intelligence and Learning Systems Laboratory, supervised by Dr. Arash Abdi. Research in computer vision, reinforcement learning, and language models for cybersecurity.
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
 
 # site social media and other links
 links:
-  email: contact@VILS-LAB.com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
   github: VILS-LAB
-  twitter: VILS-LAB
-  youtube: VILS-LAB
 
 ### jekyll settings
 
@@ -28,7 +24,8 @@ defaults:
   - scope:
       type: "members"
     values:
-      layout: member
+      layout: research-profile
+      editorial: true
   # markdown files in /_posts
   - scope:
       type: "posts"
@@ -71,3 +68,12 @@ exclude:
   - README.md
   - LICENSE.md
   - CITATION.cff
+  # Retain template examples in source, without publishing them as lab work.
+  - _members/jane-smith.md
+  - _members/john-doe.md
+  - _members/sarah-johnson.md
+  - _posts/2019-01-07-example-post-1.md
+  - _posts/2021-09-30-example-post-2.md
+  - _posts/2023-02-23-example-post-3.md
+  - DESIGN.md
+  - EDITING-fa.md
