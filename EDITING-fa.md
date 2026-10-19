@@ -66,6 +66,7 @@ links:
 - `low-light-detection`: Hesam Ghasemi
 - `offline-to-online-rl`: Hesam Soleymani
 - `llm-malware-detection`: Mojtaba Asadi
+- `robotics`: Amir Ali Dastouri
 
 برای پروژهٔ جدید، یک ورودی موجود را کپی و `id`، نام پژوهشگر، عنوان و توضیحات را ویرایش کنید. فیلد `member` برابر نام فایل عضو بدون `.md` است؛ مثلاً `ali-ahmadi`. فیلد `project` در فایل عضو را برابر `id` پروژه بگذارید.
 
