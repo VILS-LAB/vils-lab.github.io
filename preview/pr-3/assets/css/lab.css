@@ -861,8 +861,6 @@ input:focus-visible {
   margin: 17px 0 22px;
 }
 .editorial .connect-section {
-  margin:0;
-  width:100%;
   padding: 46px 0 50px;
   border-top: 1px solid var(--line);
   display: flex;
