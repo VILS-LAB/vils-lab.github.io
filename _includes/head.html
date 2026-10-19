@@ -2,7 +2,18 @@
   {% include analytics.html %}
   {% include verification.html %}
   {% include meta.html %}
+  {% unless page.editorial %}
   {% include fonts.html %}
   {% include styles.html %}
   {% include scripts.html %}
+  {% endunless %}
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/icons/vils-favicon-v2.ico' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icons/vils-favicon-v2-32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/icons/vils-favicon-v2-16.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/lab.css' | relative_url }}">
+  <script src="{{ '/assets/js/lab.js' | relative_url }}" defer></script>
+  <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
+  <script src="{{ '/assets/js/projects.js' | relative_url }}" defer></script>
+  <link rel="stylesheet" href="{{ '/assets/css/showcase.css' | relative_url }}">
+  <script src="{{ '/assets/js/showcase.js' | relative_url }}" defer></script>
 </head>

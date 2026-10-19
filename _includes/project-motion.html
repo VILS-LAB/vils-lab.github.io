@@ -1,0 +1,54 @@
+{% assign project = include.project %}
+{% assign demo_id = project.id | append: '-' | append: include.instance | default: project.id %}
+<figure class="project-demo demo-{{ project.motion }}" data-project-demo data-running="false" data-in-view="true" data-phase="offline" data-signal="code" style="--enhancement: .65" aria-labelledby="{{ demo_id }}-caption">
+  <div class="demo-topline"><span class="demo-indicator" aria-hidden="true"></span><span>{{ project.field }}</span><span class="demo-index">EXPLORATION / {{ project.number }}</span></div>
+  {% if project.motion == 'lowlight' %}
+  <div class="demo-stage night-demo">
+    <svg viewBox="0 0 600 310" role="img" aria-labelledby="{{ demo_id }}-title"><title id="{{ demo_id }}-title">Conceptual night street scene with enhancement and object detection boxes</title>
+      <rect width="600" height="310" fill="#111d2a"/><circle cx="468" cy="55" r="17" fill="#8c9c9e" opacity=".5"/>
+      <g class="street-background" fill="#1e2e3c"><path d="M0 80h90v145H0zM94 50h85v175H94zM190 103h56v122h-56zM443 87h83v138h-83zM532 40h68v185h-68z"/><path d="m250 220 50-102 50 102z" fill="#263747"/></g>
+      <g fill="#8f7752" opacity=".5"><path d="M18 105h12v17H18zM53 105h12v17H53zM115 77h12v17h-12zM148 115h12v17h-12zM463 110h12v17h-12zM493 153h12v17h-12zM551 70h12v17h-12zM578 113h12v17h-12z"/></g>
+      <path d="M0 230h600v80H0z" fill="#101922"/><path d="m299 220-19 90h42l-20-90" fill="#27303a"/><path d="M0 260h600" stroke="#36404a" stroke-dasharray="18 25"/>
+      <g class="illumination-layer"><path d="M0 80h90v145H0zM94 50h85v175H94zM190 103h56v122h-56zM443 87h83v138h-83zM532 40h68v185h-68z" fill="#7196a1" opacity=".32"/><path d="M0 230h600v80H0z" fill="#577381" opacity=".25"/></g>
+      <g class="street-car"><path d="m132 227 17-30h67l23 30 15 5v29H117v-27z" fill="#788a91"/><path d="m156 204-11 22h74l-14-22z" fill="#233c4a"/><circle cx="144" cy="261" r="12" fill="#0a111a"/><circle cx="228" cy="261" r="12" fill="#0a111a"/><rect x="235" y="234" width="13" height="7" fill="#d8c99c"/></g>
+      <g class="street-person" fill="#8c9d96"><circle cx="395" cy="195" r="8"/><path d="m387 208-6 34h28l-6-34z"/><path d="m388 239-7 30m19-30 7 30" stroke="#8c9d96" stroke-width="6"/></g>
+      <g class="detection-boxes" fill="none" stroke="#ace7b9" stroke-width="1.5"><rect x="108" y="186" width="154" height="91"/><rect x="372" y="181" width="46" height="96"/></g>
+      <g class="detection-labels" font-family="monospace" font-size="10" fill="#ace7b9"><text x="109" y="178">OBJECT / CAR</text><text x="370" y="172">PERSON</text></g>
+      <path class="night-scan" d="M0 0v310" stroke="#d6e8c4" stroke-width="2" opacity=".4"/>
+      <text x="24" y="35" fill="#9eafb1" font-family="monospace" font-size="9" letter-spacing="2">LOW-LIGHT INPUT → POLICY-GUIDED ENHANCEMENT</text>
+    </svg>
+  </div>
+  <div class="demo-controls enhancement-control"><label for="{{ demo_id }}-enhancement">Enhancement <output for="{{ demo_id }}-enhancement">65%</output></label><input id="{{ demo_id }}-enhancement" type="range" min="0" max="100" value="65" data-enhancement aria-label="Illustrative enhancement strength"><button type="button" class="demo-pause" aria-pressed="true" aria-label="Play low-light project animation">Play motion <span aria-hidden="true">▷</span></button></div>
+  {% elsif project.motion == 'reinforcement' %}
+  <div class="demo-stage rl-demo">
+    <svg viewBox="0 0 600 310" role="img" aria-labelledby="{{ demo_id }}-title"><title id="{{ demo_id }}-title">Stored experience flows into a policy that interacts with an online environment</title>
+      <g class="offline-region"><g class="dataset-stack" fill="#d8e3ce" stroke="#738a68"><rect x="34" y="91" width="106" height="122" rx="4"/><rect x="42" y="82" width="106" height="122" rx="4"/><rect x="50" y="73" width="106" height="122" rx="4"/></g><g stroke="#819675" stroke-width="2"><path d="M69 99h67m-67 18h45m-45 18h67m-67 18h51m-51 18h67"/></g><text x="53" y="245" class="diagram-label">OFFLINE DATA</text></g>
+      <path d="M158 141h79M358 141h66" fill="none" stroke="#829879" stroke-dasharray="4 7"/><path d="m229 136 8 5-8 5m187-5 8 5-8 5" fill="none" stroke="#829879"/>
+      <circle class="policy-halo" cx="298" cy="141" r="67" fill="none" stroke="#91a887" opacity=".35"/>
+      <circle class="policy-core" cx="298" cy="141" r="49" fill="#294839"/><text x="298" y="153" font-size="34" text-anchor="middle" fill="#e2ead6" font-family="serif">π</text><text x="271" y="245" class="diagram-label">POLICY</text>
+      <g class="online-region"><rect x="428" y="74" width="139" height="134" rx="4" fill="#e3e9d9" stroke="#91a887"/><path d="m451 112 35 48 45-55m-45 55 51 25" stroke="#8ea57d" fill="none"/><circle class="state-node state-one" cx="451" cy="112" r="10"/><circle class="state-node state-two" cx="486" cy="160" r="10"/><circle class="state-node state-three" cx="531" cy="105" r="10"/><circle class="state-node state-four" cx="537" cy="185" r="8"/><text x="433" y="245" class="diagram-label">ENVIRONMENT</text></g>
+      <path class="feedback-loop" d="M499 211v66H298v-76" fill="none" stroke="#b94327" stroke-dasharray="5 6"/><text x="363" y="295" font-family="monospace" font-size="8" fill="#a14b30">ONLINE FEEDBACK</text>
+      <circle class="data-particle" cx="166" cy="141" r="4" fill="#b94327"/><circle class="interaction-particle" cx="366" cy="141" r="4" fill="#b94327"/>
+      <text x="24" y="32" class="diagram-label">EXPERIENCE → INITIALIZATION → ADAPTATION</text>
+    </svg>
+  </div>
+  <div class="demo-controls"><div class="demo-switch" role="group" aria-label="Learning phase"><button type="button" data-learning-phase="offline" aria-pressed="true">Offline</button><button type="button" data-learning-phase="online" aria-pressed="false">Online</button></div><button type="button" class="demo-pause" aria-pressed="true" aria-label="Play reinforcement learning project animation">Play motion <span aria-hidden="true">▷</span></button></div><p class="demo-state-note" data-phase-note aria-live="polite">Learn a starting policy from stored experience.</p>
+  {% elsif project.motion == 'malware' %}
+  <div class="demo-stage malware-demo">
+    <svg viewBox="0 0 600 310" role="img" aria-labelledby="{{ demo_id }}-title"><title id="{{ demo_id }}-title">Code and behavior signals become tokens for language-model-based malware analysis</title>
+      <rect x="24" y="60" width="188" height="187" rx="4" fill="#172927" stroke="#45645c"/><circle cx="39" cy="75" r="2" fill="#c38460"/><circle cx="48" cy="75" r="2" fill="#8ca895"/><circle cx="57" cy="75" r="2" fill="#8ca895"/>
+      <g class="code-signal" font-family="monospace" font-size="10"><text x="40" y="108" fill="#c8b192">sample.features</text><text x="40" y="136" fill="#b0c8b3">imports → api_calls</text><text x="40" y="161" fill="#b0c8b3">strings → tokens</text><text x="40" y="186" fill="#b0c8b3">context → embedding</text><path d="M41 214h65m12 0h45" stroke="#5b7a6b" stroke-width="3"/></g>
+      <g class="behavior-signal" fill="none" stroke="#94baa2"><path d="m65 126 48 47 58-51m-58 51 40 45m-40-45-48 48"/><circle cx="65" cy="126" r="8"/><circle cx="113" cy="173" r="12"/><circle cx="171" cy="122" r="8"/><circle cx="153" cy="218" r="7"/><circle cx="65" cy="221" r="7"/></g>
+      <rect class="code-scan" x="31" y="94" width="174" height="27" fill="#9ebca6" opacity=".12"/>
+      <path d="M216 154h70m112 0h55" stroke="#78968a" stroke-dasharray="4 6"/>
+      <g class="token-stream" fill="#dba277"><rect x="229" y="146" width="10" height="16"/><rect x="246" y="146" width="7" height="16"/><rect x="260" y="146" width="13" height="16"/></g>
+      <rect x="292" y="101" width="101" height="106" rx="5" fill="#244238" stroke="#6c907d"/>
+      <g class="model-links" stroke="#739a80" fill="#c6d7bb"><path d="m315 128 28 26 27-26m-55 52 28-26 27 26m-55-52v52m55-52v52" fill="none"/><circle cx="315" cy="128" r="4"/><circle cx="343" cy="154" r="6"/><circle cx="370" cy="128" r="4"/><circle cx="315" cy="180" r="4"/><circle cx="370" cy="180" r="4"/></g>
+      <g class="analysis-shield"><path d="m505 104 39 14v44c0 27-39 47-39 47s-39-20-39-47v-44z" fill="#304c3e" stroke="#9abc9c"/><path d="m489 157 12 12 23-29" stroke="#b7d1a7" stroke-width="3" fill="none"/></g>
+      <g fill="#a1b8a8" font-family="monospace" font-size="9" letter-spacing="1"><text x="59" y="275">CODE / BEHAVIOR</text><text x="323" y="242">LLM</text><text x="470" y="242">ANALYSIS</text><text x="24" y="32">SIGNALS → TOKENS → LANGUAGE MODEL → DETECTION</text></g>
+    </svg>
+  </div>
+  <div class="demo-controls"><div class="demo-switch" role="group" aria-label="Analysis signal"><button type="button" data-analysis-signal="code" aria-pressed="true">Code</button><button type="button" data-analysis-signal="behavior" aria-pressed="false">Behavior</button></div><button type="button" class="demo-pause" aria-pressed="true" aria-label="Play malware detection project animation">Play motion <span aria-hidden="true">▷</span></button></div>
+  {% endif %}
+  <figcaption id="{{ demo_id }}-caption" class="demo-caption"><span>CONCEPT IN MOTION</span><span>Illustration of the research direction</span></figcaption>
+</figure>

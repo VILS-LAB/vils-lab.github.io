@@ -1,0 +1,779 @@
+<figure
+  class="neural-figure"
+  data-neural-flow
+  data-running="false"
+  data-in-view="true"
+  data-page-visible="true"
+  aria-labelledby="neural-caption"
+>
+  <div class="neural-heading">
+    <span class="status-dot" aria-hidden="true"></span
+    ><span>NEURAL SIGNAL FLOW</span><span>VILS / 001</span>
+  </div>
+  <div class="neural-stage">
+    <svg
+      viewBox="0 0 640 440"
+      role="img"
+      aria-labelledby="neural-flow-title neural-flow-description"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title id="neural-flow-title">
+        From image patches to learned representations
+      </title>
+      <desc id="neural-flow-description">
+        A conceptual ViT-inspired network: image patches become tokens with
+        positional information, pass through transformer encoder layers, and
+        form a learned representation. The network structure stays fixed while
+        subtle signals travel through its connections.
+      </desc>
+      <g class="neural-guides" fill="none">
+        <path d="M26 33h12m-6-6v12M600 400h12m-6-6v12" />
+        <path d="M27 360H613" stroke-dasharray="2 8" />
+      </g>
+      <g class="encoder-depth" fill="#dfe5d7" stroke="#bdc8b4">
+        <rect x="298" y="71" width="173" height="249" rx="3" />
+        <rect x="288" y="79" width="173" height="249" rx="3" />
+      </g>
+      <rect
+        class="encoder-surface"
+        x="278"
+        y="87"
+        width="173"
+        height="249"
+        rx="3"
+        fill="#edf0e5"
+        stroke="#aebb9f"
+      />
+      <text x="294" y="105" class="neural-svg-micro">TRANSFORMER ENCODER</text>
+      <path d="M292 116H437" stroke="#d0d8c7" />
+      <g class="patch-image" transform="translate(45 153) skewY(-13)">
+        <rect
+          x="-5"
+          y="-5"
+          width="106"
+          height="106"
+          fill="#e1e6d9"
+          stroke="#9cac8e"
+        />
+        <rect
+          class="neural-patch patch-0"
+          x="0"
+          y="0"
+          width="30"
+          height="30"
+          fill="#d9dccc"
+        />
+        <rect
+          class="neural-patch patch-1"
+          x="33"
+          y="0"
+          width="30"
+          height="30"
+          fill="#b5c2a7"
+        />
+        <rect
+          class="neural-patch patch-2"
+          x="66"
+          y="0"
+          width="30"
+          height="30"
+          fill="#8b9f83"
+        />
+        <rect
+          class="neural-patch patch-0"
+          x="0"
+          y="33"
+          width="30"
+          height="30"
+          fill="#b1bca4"
+        />
+        <rect
+          class="neural-patch patch-1"
+          x="33"
+          y="33"
+          width="30"
+          height="30"
+          fill="#65816b"
+        />
+        <rect
+          class="neural-patch patch-2"
+          x="66"
+          y="33"
+          width="30"
+          height="30"
+          fill="#ced6bf"
+        />
+        <rect
+          class="neural-patch patch-0"
+          x="0"
+          y="66"
+          width="30"
+          height="30"
+          fill="#546d5c"
+        />
+        <rect
+          class="neural-patch patch-1"
+          x="33"
+          y="66"
+          width="30"
+          height="30"
+          fill="#94ab8c"
+        />
+        <rect
+          class="neural-patch patch-2"
+          x="66"
+          y="66"
+          width="30"
+          height="30"
+          fill="#c59672"
+        />
+        <path
+          d="m3 77 23-20 20 11 26-40 22 26"
+          fill="none"
+          stroke="#eaf0dc"
+          opacity=".7"
+        />
+        <path
+          d="M-12-5h-6v15m124-15h6v15M-18 86v15h6m118 0h6V86"
+          fill="none"
+          stroke="#6f8262"
+        />
+      </g>
+      <g
+        class="patch-token-links"
+        fill="none"
+        stroke="#aab799"
+        stroke-width=".8"
+      >
+        <path d="M75.0 161.1 C175 161.1 166 132 211 132" />
+        <path d="M108.0 153.5 C175 153.5 166 153 211 153" />
+        <path d="M141.0 145.9 C175 145.9 166 174 211 174" />
+        <path d="M75.0 194.1 C175 194.1 166 195 211 195" />
+        <path d="M108.0 186.5 C175 186.5 166 216 211 216" />
+        <path d="M141.0 178.9 C175 178.9 166 237 211 237" />
+        <path d="M75.0 227.1 C175 227.1 166 258 211 258" />
+        <path d="M108.0 219.5 C175 219.5 166 279 211 279" />
+        <path d="M141.0 211.9 C175 211.9 166 300 211 300" />
+      </g>
+      <g class="token-embeddings">
+        <rect
+          x="211"
+          y="126"
+          width="29"
+          height="12"
+          fill="#d9dccc"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="132" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="147"
+          width="29"
+          height="12"
+          fill="#b5c2a7"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="153" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="168"
+          width="29"
+          height="12"
+          fill="#8b9f83"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="174" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="189"
+          width="29"
+          height="12"
+          fill="#b1bca4"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="195" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="210"
+          width="29"
+          height="12"
+          fill="#65816b"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="216" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="231"
+          width="29"
+          height="12"
+          fill="#ced6bf"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="237" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="252"
+          width="29"
+          height="12"
+          fill="#546d5c"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="258" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="273"
+          width="29"
+          height="12"
+          fill="#94ab8c"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="279" r="3" fill="#b94327" opacity=".65" />
+        <rect
+          x="211"
+          y="294"
+          width="29"
+          height="12"
+          fill="#c59672"
+          stroke="#8b9b7d"
+          stroke-width=".5"
+        />
+        <circle cx="250" cy="300" r="3" fill="#b94327" opacity=".65" />
+      </g>
+      <path d="M250 120v-20h-22" fill="none" stroke="#a1ad94" />
+      <text x="201" y="92" class="neural-svg-micro">+ POSITION</text>
+      <g
+        class="token-encoder-links"
+        fill="none"
+        stroke="#a2b18f"
+        stroke-width=".8"
+      >
+        <path d="M254 132H297" />
+        <path d="M254 153H297" />
+        <path d="M254 174H297" />
+        <path d="M254 195H297" />
+        <path d="M254 216H297" />
+        <path d="M254 237H297" />
+        <path d="M254 258H297" />
+        <path d="M254 279H297" />
+        <path d="M254 300H297" />
+      </g>
+      <g
+        class="attention-connections"
+        fill="none"
+        stroke="#859a76"
+        stroke-width=".65"
+        opacity=".26"
+      >
+        <path d="M302 132 363 132" />
+        <path d="M302 132 363 153" />
+        <path d="M302 132 363 174" />
+        <path d="M302 132 363 195" />
+        <path d="M302 132 363 216" />
+        <path d="M302 132 363 237" />
+        <path d="M302 132 363 258" />
+        <path d="M302 132 363 279" />
+        <path d="M302 132 363 300" />
+        <path d="M302 153 363 132" />
+        <path d="M302 153 363 153" />
+        <path d="M302 153 363 174" />
+        <path d="M302 153 363 195" />
+        <path d="M302 153 363 216" />
+        <path d="M302 153 363 237" />
+        <path d="M302 153 363 258" />
+        <path d="M302 153 363 279" />
+        <path d="M302 153 363 300" />
+        <path d="M302 174 363 132" />
+        <path d="M302 174 363 153" />
+        <path d="M302 174 363 174" />
+        <path d="M302 174 363 195" />
+        <path d="M302 174 363 216" />
+        <path d="M302 174 363 237" />
+        <path d="M302 174 363 258" />
+        <path d="M302 174 363 279" />
+        <path d="M302 174 363 300" />
+        <path d="M302 195 363 132" />
+        <path d="M302 195 363 153" />
+        <path d="M302 195 363 174" />
+        <path d="M302 195 363 195" />
+        <path d="M302 195 363 216" />
+        <path d="M302 195 363 237" />
+        <path d="M302 195 363 258" />
+        <path d="M302 195 363 279" />
+        <path d="M302 195 363 300" />
+        <path d="M302 216 363 132" />
+        <path d="M302 216 363 153" />
+        <path d="M302 216 363 174" />
+        <path d="M302 216 363 195" />
+        <path d="M302 216 363 216" />
+        <path d="M302 216 363 237" />
+        <path d="M302 216 363 258" />
+        <path d="M302 216 363 279" />
+        <path d="M302 216 363 300" />
+        <path d="M302 237 363 132" />
+        <path d="M302 237 363 153" />
+        <path d="M302 237 363 174" />
+        <path d="M302 237 363 195" />
+        <path d="M302 237 363 216" />
+        <path d="M302 237 363 237" />
+        <path d="M302 237 363 258" />
+        <path d="M302 237 363 279" />
+        <path d="M302 237 363 300" />
+        <path d="M302 258 363 132" />
+        <path d="M302 258 363 153" />
+        <path d="M302 258 363 174" />
+        <path d="M302 258 363 195" />
+        <path d="M302 258 363 216" />
+        <path d="M302 258 363 237" />
+        <path d="M302 258 363 258" />
+        <path d="M302 258 363 279" />
+        <path d="M302 258 363 300" />
+        <path d="M302 279 363 132" />
+        <path d="M302 279 363 153" />
+        <path d="M302 279 363 174" />
+        <path d="M302 279 363 195" />
+        <path d="M302 279 363 216" />
+        <path d="M302 279 363 237" />
+        <path d="M302 279 363 258" />
+        <path d="M302 279 363 279" />
+        <path d="M302 279 363 300" />
+        <path d="M302 300 363 132" />
+        <path d="M302 300 363 153" />
+        <path d="M302 300 363 174" />
+        <path d="M302 300 363 195" />
+        <path d="M302 300 363 216" />
+        <path d="M302 300 363 237" />
+        <path d="M302 300 363 258" />
+        <path d="M302 300 363 279" />
+        <path d="M302 300 363 300" />
+        <path d="M363 132 429 132" />
+        <path d="M363 132 429 153" />
+        <path d="M363 132 429 174" />
+        <path d="M363 132 429 195" />
+        <path d="M363 132 429 216" />
+        <path d="M363 132 429 237" />
+        <path d="M363 132 429 258" />
+        <path d="M363 132 429 279" />
+        <path d="M363 132 429 300" />
+        <path d="M363 153 429 132" />
+        <path d="M363 153 429 153" />
+        <path d="M363 153 429 174" />
+        <path d="M363 153 429 195" />
+        <path d="M363 153 429 216" />
+        <path d="M363 153 429 237" />
+        <path d="M363 153 429 258" />
+        <path d="M363 153 429 279" />
+        <path d="M363 153 429 300" />
+        <path d="M363 174 429 132" />
+        <path d="M363 174 429 153" />
+        <path d="M363 174 429 174" />
+        <path d="M363 174 429 195" />
+        <path d="M363 174 429 216" />
+        <path d="M363 174 429 237" />
+        <path d="M363 174 429 258" />
+        <path d="M363 174 429 279" />
+        <path d="M363 174 429 300" />
+        <path d="M363 195 429 132" />
+        <path d="M363 195 429 153" />
+        <path d="M363 195 429 174" />
+        <path d="M363 195 429 195" />
+        <path d="M363 195 429 216" />
+        <path d="M363 195 429 237" />
+        <path d="M363 195 429 258" />
+        <path d="M363 195 429 279" />
+        <path d="M363 195 429 300" />
+        <path d="M363 216 429 132" />
+        <path d="M363 216 429 153" />
+        <path d="M363 216 429 174" />
+        <path d="M363 216 429 195" />
+        <path d="M363 216 429 216" />
+        <path d="M363 216 429 237" />
+        <path d="M363 216 429 258" />
+        <path d="M363 216 429 279" />
+        <path d="M363 216 429 300" />
+        <path d="M363 237 429 132" />
+        <path d="M363 237 429 153" />
+        <path d="M363 237 429 174" />
+        <path d="M363 237 429 195" />
+        <path d="M363 237 429 216" />
+        <path d="M363 237 429 237" />
+        <path d="M363 237 429 258" />
+        <path d="M363 237 429 279" />
+        <path d="M363 237 429 300" />
+        <path d="M363 258 429 132" />
+        <path d="M363 258 429 153" />
+        <path d="M363 258 429 174" />
+        <path d="M363 258 429 195" />
+        <path d="M363 258 429 216" />
+        <path d="M363 258 429 237" />
+        <path d="M363 258 429 258" />
+        <path d="M363 258 429 279" />
+        <path d="M363 258 429 300" />
+        <path d="M363 279 429 132" />
+        <path d="M363 279 429 153" />
+        <path d="M363 279 429 174" />
+        <path d="M363 279 429 195" />
+        <path d="M363 279 429 216" />
+        <path d="M363 279 429 237" />
+        <path d="M363 279 429 258" />
+        <path d="M363 279 429 279" />
+        <path d="M363 279 429 300" />
+        <path d="M363 300 429 132" />
+        <path d="M363 300 429 153" />
+        <path d="M363 300 429 174" />
+        <path d="M363 300 429 195" />
+        <path d="M363 300 429 216" />
+        <path d="M363 300 429 237" />
+        <path d="M363 300 429 258" />
+        <path d="M363 300 429 279" />
+        <path d="M363 300 429 300" />
+      </g>
+      <g class="attention-nodes">
+        <circle
+          class="attention-node node-0"
+          cx="302"
+          cy="132"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="302"
+          cy="153"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="302"
+          cy="174"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="302"
+          cy="195"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="302"
+          cy="216"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="302"
+          cy="237"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="302"
+          cy="258"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="302"
+          cy="279"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="302"
+          cy="300"
+          r="3.4"
+          fill="#718b64"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="363"
+          cy="132"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="363"
+          cy="153"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="363"
+          cy="174"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="363"
+          cy="195"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="363"
+          cy="216"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="363"
+          cy="237"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="363"
+          cy="258"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="363"
+          cy="279"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="363"
+          cy="300"
+          r="3.4"
+          fill="#b94327"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="429"
+          cy="132"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="429"
+          cy="153"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="429"
+          cy="174"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="429"
+          cy="195"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="429"
+          cy="216"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="429"
+          cy="237"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-2"
+          cx="429"
+          cy="258"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-0"
+          cx="429"
+          cy="279"
+          r="3.4"
+          fill="#435e49"
+        />
+        <circle
+          class="attention-node node-1"
+          cx="429"
+          cy="300"
+          r="3.4"
+          fill="#435e49"
+        />
+      </g>
+      <g
+        class="representation-links"
+        fill="none"
+        stroke="#a0af8d"
+        stroke-width=".8"
+      >
+        <path d="M434 132C474 132 480 156 519 156" />
+        <path d="M434 153C474 153 480 171 519 171" />
+        <path d="M434 174C474 174 480 186 519 186" />
+        <path d="M434 195C474 195 480 201 519 201" />
+        <path d="M434 216C474 216 480 216 519 216" />
+        <path d="M434 237C474 237 480 231 519 231" />
+        <path d="M434 258C474 258 480 246 519 246" />
+        <path d="M434 279C474 279 480 261 519 261" />
+        <path d="M434 300C474 300 480 276 519 276" />
+      </g>
+      <rect
+        x="515"
+        y="141"
+        width="83"
+        height="151"
+        rx="3"
+        fill="#e6eada"
+        stroke="#b4c1a6"
+      />
+      <g class="representation-bars">
+        <rect
+          x="527"
+          y="152"
+          width="38"
+          height="5"
+          fill="#79926b"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="167"
+          width="56"
+          height="5"
+          fill="#b94327"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="182"
+          width="28"
+          height="5"
+          fill="#a5b491"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="197"
+          width="45"
+          height="5"
+          fill="#79926b"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="212"
+          width="60"
+          height="5"
+          fill="#b94327"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="227"
+          width="33"
+          height="5"
+          fill="#a5b491"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="242"
+          width="48"
+          height="5"
+          fill="#79926b"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="257"
+          width="22"
+          height="5"
+          fill="#b94327"
+          opacity=".8"
+        />
+        <rect
+          x="527"
+          y="272"
+          width="40"
+          height="5"
+          fill="#a5b491"
+          opacity=".8"
+        />
+      </g>
+      <g class="neural-signals" fill="none" stroke="#b94327" stroke-width="1.7">
+        <path
+          class="signal-trail signal-one"
+          d="M77 170C173 170 169 174 211 174H240m14 0h48l61 42 66-63c49 0 47 33 90 33"
+        />
+        <path
+          class="signal-trail signal-two"
+          d="M108 210C170 210 174 237 211 237H240m14 0h48l61-63 66 84c49 0 47-27 90-27"
+        />
+        <path
+          class="signal-trail signal-three"
+          d="M142 240C179 240 176 279 211 279H240m14 0h48l61-126 66 63c49 0 47 45 90 45"
+        />
+      </g>
+      <g
+        class="neural-stage-numbers"
+        font-family="monospace"
+        font-size="9"
+        fill="#b94327"
+      >
+        <text x="82" y="383">01</text>
+        <text x="222" y="383">02</text>
+        <text x="358" y="383">03</text>
+        <text x="549" y="383">04</text>
+      </g>
+      <g class="neural-stage-labels" text-anchor="middle">
+        <text x="88" y="402">IMAGE PATCHES</text>
+        <text x="228" y="402">TOKENS</text>
+        <text x="365" y="402">ATTENTION + MLP</text>
+        <text x="556" y="402">REPRESENTATION</text>
+      </g>
+      <text x="365" y="59" text-anchor="middle" class="neural-svg-micro">
+        LEARNED STRUCTURE / L ×
+      </text>
+    </svg>
+  </div>
+  <div class="neural-bottom">
+    <span>PATCHES → ATTENTION → REPRESENTATION</span
+    ><button
+      type="button"
+      class="neural-motion-toggle"
+      aria-pressed="true"
+      aria-label="Play neural signal animation"
+    >
+      Play motion <span aria-hidden="true">▷</span>
+    </button>
+  </div>
+  <figcaption id="neural-caption">
+    <span>A ViT-inspired view of representation learning.</span
+    ><span>CONCEPT ILLUSTRATION</span>
+  </figcaption>
+</figure>

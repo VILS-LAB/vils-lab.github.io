@@ -4,13 +4,12 @@
 
 {
   // immediately load saved (or default) mode before page renders
-  document.documentElement.dataset.dark =
-    window.localStorage.getItem("dark-mode") ?? "false";
+  document.documentElement.dataset.dark = "false";
 
   const onLoad = () => {
     // update toggle button to match loaded mode
-    document.querySelector(".dark-toggle").checked =
-      document.documentElement.dataset.dark === "true";
+    const toggle = document.querySelector(".dark-toggle");
+    if (toggle) toggle.checked = document.documentElement.dataset.dark === "true";
   };
 
   // after page loads

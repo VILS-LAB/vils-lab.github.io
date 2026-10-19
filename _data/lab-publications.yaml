@@ -1,0 +1,9 @@
+# Verified VILS publications only. Template sample citations remain in citations.yaml.
+# Add entries with title, authors (text), venue, year, and an https link.
+# Example structure (replace with a real publication before uncommenting):
+# - title: Paper title
+#   authors: Author names
+#   venue: Conference or journal
+#   year: 2026
+#   link: https://doi.org/...
+[]
