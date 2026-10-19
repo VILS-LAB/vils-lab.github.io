@@ -39,26 +39,22 @@
 
 
 
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>404 | VILS-LAB</title>
 
-<link rel="icon" href="/images/icon.png">
-
 <meta name="title" content="404">
-<meta name="description" content="An engaging 1-3 sentence description of your lab.">
+<meta name="description" content="Vision Intelligence and Learning Systems Laboratory, supervised by Dr. Arash Abdi. Research in computer vision, reinforcement learning, and language models for cybersecurity.">
 
 <meta property="og:title" content="404">
 <meta property="og:site_title" content="VILS-LAB">
-<meta property="og:description" content="An engaging 1-3 sentence description of your lab.">
+<meta property="og:description" content="Vision Intelligence and Learning Systems Laboratory, supervised by Dr. Arash Abdi. Research in computer vision, reinforcement learning, and language models for cybersecurity.">
 <meta property="og:url" content="https://vils-lab.github.io">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="en_US">
 
 <meta property="twitter:title" content="404">
-<meta property="twitter:description" content="An engaging 1-3 sentence description of your lab.">
+<meta property="twitter:description" content="Vision Intelligence and Learning Systems Laboratory, supervised by Dr. Arash Abdi. Research in computer vision, reinforcement learning, and language models for cybersecurity.">
 <meta property="twitter:url" content="https://vils-lab.github.io">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/images/share.jpg">
@@ -74,11 +70,11 @@
       "@type": "WebSite",
     
     "name": "404",
-    "description": "An engaging 1-3 sentence description of your lab.",
+    "description": "Vision Intelligence and Learning Systems Laboratory, supervised by Dr. Arash Abdi. Research in computer vision, reinforcement learning, and language models for cybersecurity.",
     "headline": "404",
     "publisher": {
       "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
+      "logo": { "@type": "ImageObject", "url": "/assets/images/mark.svg" }
     },
     "url": "https://vils-lab.github.io"
   }
@@ -86,6 +82,7 @@
 
 <link rel="alternate" type="application/rss+xml" href="https://vils-lab.github.io/feed.xml">
 
+  
   <!-- Google Fonts -->
 <!-- automatically get url from fonts used in theme file -->
 
@@ -316,132 +313,37 @@
   <script src="/_scripts/tooltip.js"></script>
 
 
+  
+  <link rel="icon" type="image/x-icon" href="/assets/icons/vils-favicon-v2.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/vils-favicon-v2-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/vils-favicon-v2-16.png">
+  <link rel="stylesheet" href="/assets/css/lab.css">
+  <script src="/assets/js/lab.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/projects.css">
+  <script src="/assets/js/projects.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/showcase.css">
+  <script src="/assets/js/showcase.js" defer></script>
 </head>
 
   <body>
-    
-
-
-
-
-
-
-
-<header class="background" style="--image: url('/images/background.jpg')" data-dark="true">
-  <a href="/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
-  <style>
-    .bubble {
-      animation: float 2s ease-out both infinite var(--delay);
-    }
-    @keyframes float {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      75% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-40px);
-      }
-    }
-  </style>
-  <g fill="currentColor" opacity="0.5">
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.1s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.4s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 1.1s"></circle>
-  </g>
-  <path fill="#38bdf8" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L -19.5 11.25
-      L 0 22.5
-      L 19.5 11.25
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="#bae6fd" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L 0 0
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="none" stroke="currentColor" stroke-width="5" d="
-      M -18 -53
-      L -10 -53
-      L -10 -29.2
-      L -30.3 -17.5
-      L -30.3 17.5
-      L 0 35
-      L 30.3 17.5
-      L 30.3 -17.5
-      L 10 -29.2
-      L 10 -53
-      L 18 -53
-    "></path>
-</svg>
-
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="Home">
-        
-          <span class="title">VILS-LAB</span>
-        
-        
-      </span>
-    
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="lab-header">
+  <a href="/" class="lab-brand" aria-label="VILS Lab home">
+    <img class="brand-symbol" src="/assets/images/mark.svg" alt="VILS Lab logo" width="46" height="46">
+    <span>VILS<span class="brand-light">/ LAB</span></span>
   </a>
-
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
-  <nav>
-    
-    
-      
-        <a href="/research/" data-tooltip="Published works">
-          Research
-        </a>
-      
-    
-      
-        <a href="/projects/" data-tooltip="Software, datasets, and more">
-          Projects
-        </a>
-      
-    
-      
-        <a href="/team/" data-tooltip="About our team">
-          Team
-        </a>
-      
-    
-      
-        <a href="/blog/" data-tooltip="Musings and miscellany">
-          Blog
-        </a>
-      
-    
-      
-        <a href="/contact/" data-tooltip="Email, address, and location">
-          Contact
-        </a>
-      
-    
+  <button class="menu-toggle" aria-expanded="false" aria-controls="lab-nav" type="button"><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+  <nav id="lab-nav" class="lab-nav" aria-label="Main navigation">
+    <a href="/research/">Research</a>
+    <a href="/team/">People</a>
+    <a href="/projects/">Projects</a>
+    <a href="/blog/">Updates</a>
+    <a class="nav-contact" href="/contact/">Let’s connect <span aria-hidden="true">↗</span></a>
   </nav>
 </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
+      
       <!--
   modify main content of page:
   - add section breaks
@@ -473,121 +375,18 @@
   </section>
 
 
+      
     </main>
-    
-
-
-<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
-    </div>
-  -->
-
-  <div>
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="mailto:contact@VILS-LAB.com" data-tooltip="Email" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0001-8713-9213" data-tooltip="ORCID" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=ETJoidYAAAAJ" data-tooltip="Google Scholar" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/VILS-LAB" data-tooltip="GitHub" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://twitter.com/VILS-LAB" data-tooltip="Twitter" data-style="bare" aria-label="Twitter">
-      <i class="icon fa-brands fa-twitter"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://youtube.com/VILS-LAB" data-tooltip="YouTube" data-style="bare" aria-label="YouTube">
-      <i class="icon fa-brands fa-youtube"></i>
-      
-    </a>
-  </div>
-
-
-    
-  </div>
-
-  <div>
-    © 2025
-    VILS-LAB
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+    <footer class="lab-footer">
+  <div class="footer-top">
+<a class="footer-wordmark" href="/"><img class="footer-logo" src="/assets/images/mark.svg" alt="VILS Lab logo" width="54" height="54"><span class="footer-brand-text">VILS<span> / LAB</span></span></a><p>Vision Intelligence<br>and Learning Systems Laboratory</p>
+<a class="text-link" href="https://github.com/VILS-LAB">Find us on GitHub <span aria-hidden="true">↗</span></a>
+</div>
+  <div class="footer-supervisor">Under the supervision of <a href="/members/arash-abdi.html">Dr. Arash Abdi ↗</a>
+</div>
+  <div class="footer-bottom">
+<span>© 2026 VILS-LAB</span><span>Seeing. Learning. Discovering.</span><a href="https://github.com/greenelab/lab-website-template">Built on Lab Website Template ↗</a>
+</div>
 </footer>
 
   </body>

@@ -1,0 +1,298 @@
+/* The supplied laboratory mark, shown with its original proportions. */
+.lab-brand .brand-symbol {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
+}
+.footer-wordmark .footer-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin-right: 10px;
+}
+.footer-wordmark .footer-brand-text {
+  font-size: 35px;
+  font-weight: 650;
+  letter-spacing: -2px;
+}
+.footer-wordmark .footer-brand-text > span {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.neural-figure {
+  margin: 0 0 0 8px;
+  min-width: 0;
+  width: calc(100% - 8px);
+  align-self: center;
+  background: #eef0e8;
+  border: 1px solid #d4dacd;
+  overflow: hidden;
+}
+.neural-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 19px;
+  border-bottom: 1px solid #d4dacd;
+  font: 8px var(--code);
+  letter-spacing: 0.07em;
+  line-height: 1.6;
+}
+.neural-heading > span:last-child {
+  margin-left: auto;
+  color: #6b7662;
+  font-size: 7px;
+}
+.neural-stage {
+  aspect-ratio: 640/440;
+  background-image: radial-gradient(#bdc7b1 0.65px, transparent 0.65px);
+  background-size: 18px 18px;
+  position: relative;
+}
+.neural-stage svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.neural-guides {
+  stroke: #b0bda1;
+  stroke-width: 1;
+}
+.neural-svg-micro {
+  font: 8px var(--code);
+  fill: #66745c;
+  letter-spacing: 0.6px;
+}
+.neural-stage-labels {
+  font: 9px var(--code);
+  fill: #526249;
+  letter-spacing: 0.5px;
+}
+.signal-trail {
+  stroke-dasharray: 14 760;
+  stroke-dashoffset: 35;
+  animation: neural-transmission 7s linear infinite;
+}
+.signal-two {
+  animation-delay: 2.3s;
+}
+.signal-three {
+  animation-delay: 4.6s;
+}
+.attention-node {
+  animation: neuron-glow 7s ease-in-out infinite;
+}
+.node-1 {
+  animation-delay: 1s;
+}
+.node-2 {
+  animation-delay: 2s;
+}
+.neural-patch {
+  animation: patch-glow 7s ease-in-out infinite;
+}
+.patch-1 {
+  animation-delay: 0.6s;
+}
+.patch-2 {
+  animation-delay: 1.2s;
+}
+.neural-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 18px;
+  border-top: 1px solid #d4dacd;
+  font: 7px var(--code);
+  color: #59694e;
+  letter-spacing: 0.035em;
+  min-height: 49px;
+}
+.neural-motion-toggle {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font: 8px var(--code);
+  padding: 3px 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.js .neural-motion-toggle {
+  display: inline-flex;
+}
+.neural-motion-toggle span {
+  font-size: 14px;
+  line-height: 1;
+}
+.neural-motion-toggle:disabled {
+  cursor: default;
+  color: #6c7663;
+  font-size: 7px;
+}
+.neural-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 18px;
+  background: var(--paper);
+  border-top: 1px solid #d4dacd;
+  font-size: 9px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.neural-figure figcaption > span:last-child {
+  font: 6px var(--code);
+  letter-spacing: 0.04em;
+  align-self: center;
+  white-space: nowrap;
+}
+.neural-figure[data-running="false"] *,
+.neural-figure[data-in-view="false"] *,
+.neural-figure[data-page-visible="false"] * {
+  animation-play-state: paused !important;
+}
+@keyframes neural-transmission {
+  0% {
+    stroke-dashoffset: 35;
+    opacity: 0;
+  }
+  5%,
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    stroke-dashoffset: -735;
+    opacity: 0;
+  }
+}
+@keyframes neuron-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  40%,
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes patch-glow {
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+  35%,
+  60% {
+    opacity: 1;
+  }
+}
+@media (max-width: 1100px) {
+  .neural-heading {
+    padding: 15px;
+  }
+  .neural-bottom {
+    padding: 13px 15px;
+    font-size: 6px;
+    gap: 12px;
+  }
+  .neural-motion-toggle {
+    font-size: 7px;
+    gap: 7px;
+  }
+  .neural-figure figcaption {
+    padding: 12px 15px;
+    font-size: 8px;
+  }
+  .neural-figure figcaption > span:last-child {
+    font-size: 5px;
+  }
+}
+@media (max-width: 800px) {
+  .neural-figure {
+    width: 100%;
+    margin: 0;
+  }
+  .neural-heading {
+    padding: 18px;
+    font-size: 10px;
+  }
+  .neural-heading > span:last-child {
+    font-size: 8px;
+  }
+  .neural-bottom {
+    padding: 16px 18px;
+    font-size: 8px;
+  }
+  .neural-motion-toggle {
+    font-size: 9px;
+  }
+  .neural-figure figcaption {
+    padding: 15px 18px;
+    font-size: 11px;
+  }
+  .neural-figure figcaption > span:last-child {
+    font-size: 7px;
+  }
+}
+@media (max-width: 580px) {
+  .lab-brand .brand-symbol {
+    width: 40px;
+    height: 40px;
+  }
+  .lab-brand {
+    gap: 10px;
+  }
+  .footer-wordmark .footer-logo {
+    width: 44px;
+    height: 44px;
+    margin-right: 7px;
+  }
+  .footer-wordmark .footer-brand-text {
+    font-size: 28px;
+  }
+  .footer-wordmark .footer-brand-text > span {
+    font-size: 23px;
+  }
+  .neural-heading {
+    padding: 15px 13px;
+    font-size: 8px;
+  }
+  .neural-heading > span:last-child {
+    font-size: 6px;
+  }
+  .neural-bottom {
+    padding: 13px 12px;
+    font-size: 5.5px;
+    gap: 9px;
+    min-height: 45px;
+  }
+  .neural-motion-toggle {
+    font-size: 7px;
+    gap: 6px;
+  }
+  .neural-figure figcaption {
+    padding: 12px;
+    font-size: 8px;
+    gap: 10px;
+  }
+  .neural-figure figcaption > span:last-child {
+    font-size: 5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .neural-figure * {
+    animation: none !important;
+  }
+  .signal-trail {
+    opacity: 0.65;
+    stroke-dasharray: 5 65;
+  }
+}
