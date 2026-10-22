@@ -1,5 +1,5 @@
 ---
-name: Mojtaba Assdi
+name: Mojtaba Asadi
 initials: MA
 role: researcher
 description: Researcher · Language models & cybersecurity
