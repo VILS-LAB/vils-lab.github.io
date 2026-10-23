@@ -39,3 +39,17 @@
   showcase_label: LLM security
   tags: [Large language models, Malware detection, Code understanding]
   stages: [Code & behavior, Language representation, Detection analysis]
+
+- id: robotics
+  number: '04'
+  member: amirali-dastouri
+  researcher: Amir Ali Dastouri
+  field: Robotics
+  short_title: TODO
+  title: TODO
+  description: TODO
+  question: TODO
+  showcase_label: Robotics
+  tags: [TODO]
+  stages: [TODO]
+
