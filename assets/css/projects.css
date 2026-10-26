@@ -518,6 +518,44 @@
     opacity: 1;
   }
 }
+/* Robotics: a CAD model, layer deposition, and programmed robot motion. */
+.demo-robotics { background: #f1eee5; border-color: #d4d7c9; }
+.demo-robotics .demo-topline, .demo-robotics .demo-caption, .demo-robotics .demo-controls { border-color: #d4d7c9; }
+.demo-robotics .demo-controls, .editorial .robotics-state-note { background: #e9e9dd; }
+.robotics-panel { fill: #f8f6ef; stroke: #c8d0bf; }
+.robotics-heading, .robotics-micro, .robotics-labels { font-family: var(--code); fill: #435d50; }
+.robotics-heading { font-size: 9px; letter-spacing: 1.2px; }
+.robotics-micro { font-size: 8px; letter-spacing: .3px; }
+.robotics-labels { font-size: 8px; letter-spacing: .5px; text-anchor: middle; }
+.robotics-design-panel, .robotics-print-panel, .robotics-control-panel { transition: opacity .25s; }
+.demo-robotics[data-robotics-phase] .robotics-design-panel,
+.demo-robotics[data-robotics-phase] .robotics-print-panel,
+.demo-robotics[data-robotics-phase] .robotics-control-panel { opacity: .55; }
+.demo-robotics[data-robotics-phase="design"] .robotics-design-panel,
+.demo-robotics[data-robotics-phase="print"] .robotics-print-panel,
+.demo-robotics[data-robotics-phase="control"] .robotics-control-panel { opacity: 1; }
+.robotics-design-trace { stroke-dasharray: 24 300; animation: robotics-trace 6s linear infinite; }
+.robotics-print-head { animation: robotics-print 3s ease-in-out infinite; }
+.robotics-deposition { transform-origin: 300px 223px; animation: robotics-layers 6s ease-in-out infinite; }
+.robotics-shoulder { transform-origin: 478px 207px; animation: robotics-shoulder 6s ease-in-out infinite; }
+.robotics-elbow { transform-origin: 503px 151px; animation: robotics-elbow 6s ease-in-out infinite; }
+.robotics-gripper { animation: robotics-grip 6s ease-in-out infinite; }
+.robotics-target { animation: robotics-target 6s ease-in-out infinite; }
+.robotics-cycle { animation: robotics-cycle 9s ease-in-out infinite; }
+@keyframes robotics-trace { to { stroke-dashoffset: -648; } }
+@keyframes robotics-print { 0%, 100% { transform: translateX(-15px); } 50% { transform: translateX(34px); } }
+@keyframes robotics-layers { 0%, 100% { transform: scaleY(.12); } 80% { transform: scaleY(1); } }
+@keyframes robotics-shoulder { 0%, 15%, 100% { transform: rotate(-9deg); } 45%, 65% { transform: rotate(12deg); } }
+@keyframes robotics-elbow { 0%, 15%, 100% { transform: rotate(-13deg); } 45%, 65% { transform: rotate(17deg); } }
+@keyframes robotics-grip { 0%, 25%, 85%, 100% { transform: rotate(-7deg); } 45%, 65% { transform: rotate(9deg); } }
+@keyframes robotics-target { 0%, 20%, 85%, 100% { opacity: .35; } 45%, 65% { opacity: 1; } }
+@keyframes robotics-cycle { 0%, 5% { transform: translateX(0); opacity: 0; } 12%, 88% { opacity: 1; } 95%, 100% { transform: translateX(392px); opacity: 0; } }
+.researcher-card-robotics .initials-portrait { background: #e7dfcf; color: #65583f; }
+@media (prefers-reduced-motion: reduce) {
+  .demo-robotics .robotics-design-trace { stroke-dasharray: none; }
+  .demo-robotics .robotics-cycle { opacity: 0; }
+}
+
 /* Motion has a separate control per project, and pauses outside the viewport. */
 .project-demo[data-running="false"] *,
 .project-demo[data-in-view="false"] *,

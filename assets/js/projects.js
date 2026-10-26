@@ -70,6 +70,23 @@
           );
       });
     });
+    const roboticsStages = {
+      design: "Design custom parts and mechanisms for a robot prototype.",
+      print: "Fabricate the designed parts layer by layer, then assemble the mechanism.",
+      control: "Write control software, test robot motion, and refine the prototype.",
+    };
+    const roboticsButtons = demo.querySelectorAll("[data-robotics-phase]");
+    if (roboticsButtons.length) demo.dataset.roboticsPhase = "design";
+    roboticsButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        demo.dataset.roboticsPhase = button.dataset.roboticsPhase;
+        roboticsButtons.forEach((item) =>
+          item.setAttribute("aria-pressed", String(item === button)),
+        );
+        demo.querySelector("[data-robotics-note]").textContent =
+          roboticsStages[button.dataset.roboticsPhase];
+      });
+    });
   });
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
