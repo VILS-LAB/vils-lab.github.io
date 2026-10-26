@@ -1,0 +1,69 @@
+  <div class="demo-stage robotics-demo">
+    <svg viewBox="0 0 600 310" role="img" aria-labelledby="{{ demo_id }}-title {{ demo_id }}-description">
+      <title id="{{ demo_id }}-title">Robot prototyping: design, 3D printing, and programmed motion</title>
+      <desc id="{{ demo_id }}-description">A mechanical part drawn in CAD, a printer depositing layers, and a robot arm moving toward a target illustrate the prototyping process. This is a conceptual illustration, not a specific robot built by the researcher.</desc>
+      <defs>
+        <pattern id="{{ demo_id }}-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0v20" fill="none" stroke="#788981" stroke-opacity=".12"/></pattern>
+        <clipPath id="{{ demo_id }}-part"><path d="M265 222v-17h49v-37h18v54z"/></clipPath>
+      </defs>
+      <rect width="600" height="310" fill="url(#{{ demo_id }}-grid)"/>
+      <text x="24" y="30" class="robotics-heading" font-family="monospace" font-size="9" letter-spacing="1.2" fill="#435d50">DESIGN → FABRICATE → BRING TO LIFE</text>
+      <g class="robotics-design-panel">
+        <rect x="24" y="64" width="160" height="179" rx="5" class="robotics-panel" fill="#f8f6ef" stroke="#c8d0bf"/>
+        <g class="robotics-cad" fill="none" stroke="#647d70" stroke-width="1.5" stroke-linejoin="round">
+          <path d="m55 180 49 28 56-32-20-12-36 21-29-17z" fill="#dce4d7"/>
+          <path d="M104 185v23l56-32v-67l-20 12v43" fill="#cedace"/>
+          <path d="M140 121l20-12-20-12-20 12v67m0-67 20 12v43m-36 21v23M55 180v23l49 28 56-32v-23m-56 32v23"/>
+          <ellipse cx="139" cy="143" rx="5" ry="8" transform="rotate(27 139 143)"/>
+          <path d="m65 222 31 18m-35-13 8-10m23 28 8-10M169 111v81m-4-78 10-6m-10 87 10-6" stroke="#ac8267" stroke-width="1"/>
+          <path class="robotics-design-trace" d="m55 180 49 28 56-32v-67l-20-12-20 12v67l-16 9-29-17z" stroke="#b94327" stroke-width="2"/>
+        </g>
+        <text x="37" y="85" class="robotics-micro" font-family="monospace" font-size="8" letter-spacing=".3" fill="#435d50">01 / CAD MODEL</text>
+      </g>
+      <g class="robotics-flow" fill="none" stroke="#a7785b" stroke-width="1.5"><path d="M188 157h26m-7-5 7 5-7 5M386 157h24m-7-5 7 5-7 5"/></g>
+      <g class="robotics-print-panel">
+        <rect x="220" y="64" width="160" height="179" rx="5" class="robotics-panel" fill="#f8f6ef" stroke="#c8d0bf"/>
+        <text x="232" y="85" class="robotics-micro" font-family="monospace" font-size="8" letter-spacing=".3" fill="#435d50">02 / 3D PRINT</text>
+        <path d="M239 221V101h122v120M238 123h124" fill="none" stroke="#5e7368" stroke-width="4"/>
+        <path d="M247 104v116m106-116v116" stroke="#a3b0a3" stroke-width="1.5"/>
+        <rect x="240" y="223" width="121" height="7" rx="2" fill="#536b5f"/>
+        <path d="M265 222v-17h49v-37h18v54z" fill="#d9b99c" stroke="#a7785b"/>
+        <g clip-path="url(#{{ demo_id }}-part)" stroke="#a56b47" stroke-width="1.5">
+          <path d="M263 218h72m-72-5h72m-72-5h72m-72-5h72m-72-5h72m-72-5h72m-72-5h72m-72-5h72m-72-5h72m-72-5h72"/>
+          <rect class="robotics-deposition" x="264" y="168" width="71" height="55" fill="#b94327" fill-opacity=".2" stroke="none"/>
+        </g>
+        <g class="robotics-print-head">
+          <path d="M290 124v19" stroke="#647d70" stroke-width="2"/>
+          <rect x="279" y="141" width="22" height="17" rx="2" fill="#536b5f"/>
+          <path d="m284 158 6 10 6-10z" fill="#a7785b"/>
+          <path class="robotics-filament" d="M290 168v10" stroke="#b94327" stroke-width="2"/>
+        </g>
+      </g>
+      <g class="robotics-control-panel">
+        <rect x="416" y="64" width="160" height="179" rx="5" class="robotics-panel" fill="#f8f6ef" stroke="#c8d0bf"/>
+        <text x="428" y="85" class="robotics-micro" font-family="monospace" font-size="8" letter-spacing=".3" fill="#435d50">03 / PROGRAM &amp; TEST</text>
+        <g class="robotics-code" fill="none" stroke="#8b9d8d" stroke-width="2"><path d="M431 104h24m5 0h14m-43 7h12m5 0h29m-46 7h31"/></g>
+        <path d="M434 231h125" stroke="#aab5a6"/>
+        <path d="m456 227 8-15h29l8 15z" fill="#647d70"/>
+        <rect x="466" y="203" width="24" height="11" rx="3" fill="#a7785b"/>
+        <g class="robotics-shoulder">
+          <path d="m478 207 25-56" stroke="#647d70" stroke-width="17" stroke-linecap="round"/>
+          <path d="m478 207 25-56" stroke="#d6dfcf" stroke-width="9" stroke-linecap="round"/>
+          <g class="robotics-elbow">
+            <path d="m503 151 40 23" stroke="#647d70" stroke-width="13" stroke-linecap="round"/>
+            <path d="m503 151 40 23" stroke="#d6dfcf" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="503" cy="151" r="9" fill="#a7785b" stroke="#f2eee4" stroke-width="2"/>
+            <g transform="translate(543 174)"><g class="robotics-gripper" fill="none" stroke="#536b5f" stroke-width="3" stroke-linecap="round"><path d="m0 0 8-5 9 5m-17 0 1 10 9 5"/></g></g>
+          </g>
+          <circle cx="478" cy="207" r="9" fill="#a7785b" stroke="#f2eee4" stroke-width="2"/>
+        </g>
+        <rect x="542" y="214" width="14" height="14" rx="2" fill="#b94327"/>
+        <circle class="robotics-target" cx="549" cy="221" r="15" fill="none" stroke="#b94327" stroke-dasharray="3 4"/>
+      </g>
+      <g class="robotics-labels" font-family="monospace" font-size="8" letter-spacing=".5" text-anchor="middle" fill="#435d50"><text x="104" y="269">MECHANICAL DESIGN</text><text x="300" y="269">LAYER BY LAYER</text><text x="496" y="269">CODE INTO MOTION</text></g>
+      <path d="M104 285h392" fill="none" stroke="#b8c3b2" stroke-dasharray="3 7"/>
+      <circle class="robotics-cycle" cx="104" cy="285" r="3" fill="#b94327"/>
+    </svg>
+  </div>
+  <div class="demo-controls"><div class="demo-switch" role="group" aria-label="Robot prototyping stage"><button type="button" data-robotics-phase="design" aria-pressed="true">Design</button><button type="button" data-robotics-phase="print" aria-pressed="false">3D print</button><button type="button" data-robotics-phase="control" aria-pressed="false">Control</button></div><button type="button" class="demo-pause" aria-pressed="true" aria-label="Play robotics project animation">Play motion <span aria-hidden="true">▷</span></button></div>
+  <p class="demo-state-note robotics-state-note" data-robotics-note aria-live="polite">Design custom parts and mechanisms for a robot prototype.</p>

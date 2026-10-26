@@ -49,6 +49,8 @@
     </svg>
   </div>
   <div class="demo-controls"><div class="demo-switch" role="group" aria-label="Analysis signal"><button type="button" data-analysis-signal="code" aria-pressed="true">Code</button><button type="button" data-analysis-signal="behavior" aria-pressed="false">Behavior</button></div><button type="button" class="demo-pause" aria-pressed="true" aria-label="Play malware detection project animation">Play motion <span aria-hidden="true">▷</span></button></div>
+  {% elsif project.motion == 'robotics' %}
+  {% include project-motion-robotics.html %}
   {% endif %}
   <figcaption id="{{ demo_id }}-caption" class="demo-caption"><span>CONCEPT IN MOTION</span><span>Illustration of the research direction</span></figcaption>
 </figure>
