@@ -45,11 +45,12 @@
   member: amirali-dastouri
   researcher: Amir Ali Dastouri
   field: Robotics
-  short_title: TODO
-  title: TODO
-  description: TODO
-  question: TODO
+  short_title: From digital designs to moving robots.
+  title: Robot Design, 3D Printing, and Control
+  description: Designing robot mechanisms, fabricating custom parts with a 3D printer, and programming the assembled robots. The work connects mechanical design with control software through hands-on prototyping, testing, and refinement.
+  question: How can mechanical design, 3D printing, and control software come together to turn a robot concept into a working prototype?
+  motion: robotics
   showcase_label: Robotics
-  tags: [TODO]
-  stages: [TODO]
+  tags: [Robotics, Mechanical design, 3D printing, Robot programming]
+  stages: [Design the mechanism, Print & assemble, Program & test]
 
